@@ -9,8 +9,8 @@ fun part1(jump:Int):Int{
     var l = mutableListOf(0)
     var pos = 0
     for (i in 1..2017){
-        pos = 1 + (pos + jump) % i
-        l.add(pos, i)
+        pos = (pos + jump) % i
+        l.add(++pos, i)
     }
     return l[l.indexOf(2017)+1]
 }
